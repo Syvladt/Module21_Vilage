@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <conio.h>
 
 // Типы зданий, их всего 4 (Дом, гараж, сарай и баня)
 enum buildsType
@@ -370,17 +369,11 @@ void showVillage(std::string villageName, std::vector<area>& village)
 			}
 			std::cout << std::string(60, '=') << '\n' << "Total square rooms: " << result << '\n';
 			result = 0;
-			std::cout << "Press any key ...";
-			std::cin.ignore();
-			std::cin.clear();
-			while (!_kbhit());
+			system("pause");
 		}
 	}
 	else
 		std::cout << "No one lives in the village\n";
-	//std::cout << std::string(60, '=') << '\n';
-	//std::cout << "Press any key ...";
-	//while (!_kbhit());
 };
 
 // Главная функция, главное меню управления посёлком
@@ -424,8 +417,7 @@ int main()
 			return 0;
 		else
 			std::cout << "Unknown command, repeat.\n";
-		std::cout << "Press any key ...";
-		while (!_kbhit());
+		system("pause");
 		std::cout << "\x1B[2J\x1B[H";
 	}
 }
